@@ -1,0 +1,16 @@
+<?php
+
+function cool_login_form_alter(&$form, &$form_state, $form_id) {
+if ($form_id == "user_login_block") {
+dpm($form);
+$form['facebook_login'] = array(
+'#markup' => '<div id="facebook-login" class="facebook-login">
+ <p><a href="/user/simple-fb-connect">Login with Facebook</a></p>
+<p>OR</p>
+</div>',
+'#weight' => -10,
+);
+
+return $form;
+}
+}

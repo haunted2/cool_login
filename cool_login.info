@@ -1,0 +1,4 @@
+name = Cool login
+core = 7.x
+version = 7.x-0.5
+description = A modole to make the login block cool
