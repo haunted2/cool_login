@@ -1,6 +1,11 @@
-/* Implementation of hook_form_alter */
-
 <?php
+/*
+@file
+* Include facebook login link from simple_fb_connect module 
+* into drupal user login block
+*/
+
+/* Implementation of hook_form_alter */
 function cool_login_form_alter(&$form, &$form_state, $form_id)
 {
  if ($form_id == "user_login_block") {
@@ -8,7 +13,7 @@ function cool_login_form_alter(&$form, &$form_state, $form_id)
   $form['facebook_login'] = array(
    '#markup' => '<div id="facebook-login" class="facebook-login">
  <p><a href="/user/simple-fb-connect">Login with Facebook</a></p>
-<p>OR</p>
+<p id="facebook-login-or" class="facebook-login-or">Or</p>
 </div>',
    '#weight' => - 10,
   );
