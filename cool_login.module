@@ -13,7 +13,7 @@ function cool_login_form_alter(&$form, &$form_state, $form_id)
   $form['facebook_login'] = array(
    '#markup' => '<div id="facebook-login" class="facebook-login">
  <p><a href="/user/simple-fb-connect">Login with Facebook</a></p>
-<p id="facebook-login-or" class="facebook-login-or">Or</p>
+<p id="facebook-login-or" class="facebook-login-or">OR</p>
 </div>',
    '#weight' => - 10,
   );
